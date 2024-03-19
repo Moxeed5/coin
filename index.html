@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Covenant Of BOME</h1>
+
+    <div class="circle-text">
+        <p>Going hard ereday</p>
+        <p>Coin go up</p>
+        <!-- Add all other paragraphs here -->
+    </div>
+    
+    
+    <h1>Sol Presale Wallet Address</h1>
+    <div id="infoToCopy" class="clipboard-text">FJZ7vVuoys4dzF8dqu6bi7SkqJ3W1nBKocBKtStVYDhb</div>
+    <script>
+        document.getElementById('infoToCopy').addEventListener('click', function() {
+            const text = this.innerText;
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+        });
+    </script>
+
+    <div class="bounce">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/DVD_video_logo.png" alt="DVD Video Logo">
+    </div>
+
+    <img src="https://kermitfrog.lol/telegram.webp" alt="Descriptive text about the image">
+    
+    <div>
+        <img src="https://kermitfrog.lol/Solana_logo.png" alt="Solana Logo">
+    </div>
+    <div>
+        <img src="https://kermitfrog.lol/x.webp" alt="Descriptive text about the third image">
+    </div>
+
+    <!-- Ensure this image is stored in a location relative to your HTML file -->
+    <img src="../../../Downloads/crusaderpepe.png" alt="Crusader Pepe">
+
+    <script src="app.js"></script>
+
+    <footer style="background-color: #f0f0f0; text-align: center; padding: 20px; position: fixed; left: 0; bottom: 0; width: 100%;">
+        CopyRight deez nuts 2024
+    </footer>
+</body>
+</html>

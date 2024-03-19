@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'Cherl';
+    src: url('https://www.slerf.wtf/fonts/Cherl2.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Cherl', serif; /* Fallback to serif if Cherl doesn't load */
+}
+
+
+@keyframes bounceVertical {
+    0%, 100% { top: 0; }
+    50% { top: calc(100vh - 100px); } /* Adjust based on image height */
+}
+
+@keyframes bounceHorizontal {
+    0%, 100% { left: 0; }
+    50% { left: calc(100vw - 100px); } /* Adjust based on image width */
+}
+
+.bounce {
+    position: absolute;
+    animation: bounceVertical 5s linear infinite, bounceHorizontal 8s linear infinite;
+}
+
+.bounce img {
+    display: block; /* Remove extra space below image */
+    width: 100px; /* Adjust based on your needs */
+    height: auto;
+}
+
+/* Center the h1 element */
+h1 {
+    text-align: center;
+}
+
+/* Align all images in a vertical row on the left */
+img {
+    display: block; /* Make images block-level for full-width line breaks */
+    margin-left: auto; /* Center-align the images */
+    margin-right: auto; /* Center-align the images */
+    max-width: 100%; /* Make images responsive */
+}
+
+/* Additional styles for your bouncing image, if needed */
+.bounce {
+    position: relative; /* Changed from absolute for vertical alignment */
+    margin-left: 0; /* Align to the left */
+    margin-bottom: 20px; /* Add some space below the bouncing image */
+}
+
+
+@font-face {
+    font-family: 'Cherl2';
+    src: url('https://www.slerf.wtf/fonts/Cherl2.ttf') format('truetype');
+}
+
+body {
+    background: linear-gradient(135deg, #f7f5d0 50%, #90ee90 50%);
+    background-size: 100% 200%;
+    animation: backgroundSlide 10s linear infinite;
+    font-family: 'Cherl2', Arial, sans-serif;
+}
+
+@keyframes backgroundSlide {
+    0% { background-position: 0 0; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0 0; }
+}
+
+h1, .section, p { /* Apply the font family to all text elements */
+    font-family: 'Cherl2', Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.clipboard-text {
+    cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #d0d0d0;
+    display: block;
+}
+.clipboard-text:hover {
+    background-color: #e0e0e0; /* Changes background color on hover for visual feedback */
+}
+
+.section {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+
+.circle-text {
+    position: relative;
+    width: 20em; /* Control the size of the circle */
+    height: 20em;
+    border-radius: 50%;
+    margin: 50px auto; /* Center the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px; /* Adjust font size as necessary */
+}
+
+.circle-text::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    border-radius: 50%;
+    mask-image: radial-gradient(farthest-side at center, transparent 50%, black 50%);
+    animation: spin 10s linear infinite;
+}
+
+.circle-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2em; /* Controls the distance of text from center */
+    box-sizing: border-box;
+    animation: spin 10s linear infinite reverse;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
